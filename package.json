@@ -7,13 +7,15 @@
 	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build",
-		"format": "wp-scripts format && stylelint \"**/*.scss\" --fix",
+		"format": "prettier --write \"**/*.js\" && stylelint \"**/*.scss\" --fix",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
 		"start": "wp-scripts start",
 		"packages-update": "wp-scripts packages-update",
-		"prepare": "husky install"
-	},
+		"prepare": "husky install",
+		"fix:all": "npm run lint:css && npm run lint:js --fix && npm run format"
+	  },
+	  
 	"prettier": "@wordpress/prettier-config",
 	"stylelint": {
 		"extends": "@wordpress/stylelint-config/scss"
@@ -28,7 +30,8 @@
 	"dependencies": {
 		"@wordpress/block-editor": "^7.0.4",
 		"@wordpress/blocks": "^11.1.2",
-		"@wordpress/components": "^19.0.0",
+		"@wordpress/components": "^19.17.0",
+		"@wordpress/element": "^5.18.0",
 		"@wordpress/i18n": "^4.2.3"
 	},
 	"devDependencies": {
@@ -36,9 +39,14 @@
 		"@wordpress/prettier-config": "^1.1.1",
 		"@wordpress/scripts": "^19.0.0",
 		"@wordpress/stylelint-config": "^19.1.0",
+		"eslint": "^8.49.0",
 		"eslint-config-prettier": "^7.2.0",
+		"eslint-plugin-react": "^7.33.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
 		"husky": "^6.0.0",
 		"lint-staged": "^11.0.0",
-		"stylelint": "^13.13.1"
+		"prettier": "^3.0.3",
+		"stylelint": "^13.13.1",
+		"stylelint-scss": "^5.2.1"
 	}
 }

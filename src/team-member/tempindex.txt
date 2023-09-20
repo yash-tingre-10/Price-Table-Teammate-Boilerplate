@@ -28,14 +28,14 @@ registerBlockType('blocks-course/team-member', {
       type: 'array',
       default: [],
     },
-    showButton: {
-      type: 'boolean',
-      default: true,
-    },
-    buttonColor: {
+    customButtonColor: {
       type: 'string',
-      default: '#0073e5',
-    }
+      default: '',
+    },
+    divBackgroundColor: {
+      type: 'string',
+      default: '',
+    },
   },
   edit: Edit,
   save: Save,

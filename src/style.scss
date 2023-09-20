@@ -1,3 +1,63 @@
+
+  
+
+.wp-block-blocks-course-team-members {
+	display: block;
+
+	@for $i from 1 through 6 {
+		&.has-#{$i}-columns {
+			/* stylelint-disable-next-line selector-class-pattern */
+			> .block-editor-inner-blocks > .block-editor-block-list__layout > {
+				[data-type='blocks-course/team-member'] {
+					width: calc(100% / #{$i} - 20px);
+				}
+
+				.block-list-appender {
+					align-self: stretch;
+					width: calc(100% / #{$i} - 20px);
+					border: 1px dashed;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					min-height: 70px;
+				}
+			}
+		}
+	}
+	/* stylelint-disable-next-line selector-class-pattern */
+	> .block-editor-inner-blocks > .block-editor-block-list__layout {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -10px;
+		margin-right: -10px;
+
+		[data-type='blocks-course/team-member'] {
+			max-width: none;
+			margin: 0;
+		}
+
+		> [data-type='blocks-course/team-member'] {
+			margin: 10px;
+
+			h2 {
+				color: #222;
+				font-size: 22px;
+				font-size: bold;
+				margin: 0;
+			}
+
+			p {
+				color: #565656;
+				font-size: 16px;
+				font-weight: 300;
+				margin-bottom: 5px;
+				margin-top: 5px;
+			}
+		}
+	}
+}
+
+
 .wp-block-blocks-course-team-members {
 	display: flex;
 	flex-wrap: wrap;
@@ -16,19 +76,84 @@
 	.wp-block-blocks-course-team-member {
 		margin: 10px;
 
-		h4 {
-			color: #222;
-			font-size: 22px;
-			font-size: bold;
-			margin: 0;
-		}
-
-		p {
-			color: #565656;
-			font-size: 16px;
-			font-weight: 300;
-			margin-bottom: 5px;
-			margin-top: 5px;
-		}
-	}
+			}
 }
+
+
+
+/* editor.scss */
+
+.wp-block-blocks-course-team-members {
+	display: flex;
+  }
+  
+  .wp-block-blocks-course-team-member {
+	text-align: center;
+	background-color: rgb(180, 214, 244);
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin: 10px;
+	flex: 1;
+  }
+  
+  .member-details h2 {
+	color: #222;
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0;
+  }
+  
+  .member-details h1 {
+	color: #565656;
+	font-size: 16px;
+	font-weight: 300;
+	margin-bottom: 5px;
+	margin-top: 5px;
+  }
+  
+  .feature-list {
+	text-align: left;
+	list-style-type: disc;
+	padding-left: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+  }
+  
+  .feature-item {
+	margin-bottom: 10px;
+  }
+  
+  .delete-button {
+	color: #000000;
+  }
+  
+  .add-feature-icon {
+	cursor: pointer;
+	margin-left: 5px;
+  }
+  
+  .get-started-button button {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 15px 30px;
+	font-size: 16px;
+	border: 1px solid #27264b;
+	border-radius: 5px;
+	background-color: #fff;
+	color: #27264b;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: background-color 250ms ease-in-out;
+  }
+
+  .get-started-button button:hover {
+	background-color: rgb(228, 228, 240);
+  }
+
+  .get-started-button button.custom-color {
+	background-color: #FFA500; /* Update with your custom color */
+  }
+
+  
+
+

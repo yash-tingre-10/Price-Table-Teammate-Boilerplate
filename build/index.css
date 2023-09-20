@@ -1,8 +1,77 @@
 /*!****************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/editor.scss ***!
   \****************************************************************************************************************************************************************************************************************************************/
+.custom-team-member-block {
+  text-align: center;
+  background-color: #b4d6f4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  flex: 1;
+}
+.custom-team-member-block .feature-list {
+  text-align: left;
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.custom-team-member-block .add-feature,
+.custom-team-member-block .get-started-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.custom-team-member-block .member-details h2 {
+  color: #222;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+.custom-team-member-block .member-details h1 {
+  color: #565656;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.custom-team-member-block .feature-item {
+  margin-bottom: 10px;
+}
+.custom-team-member-block .delete-button {
+  color: #000000;
+}
+.custom-team-member-block .add-feature-icon {
+  cursor: pointer;
+  margin-left: 5px;
+}
+.custom-team-member-block .get-started-button button {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 15px 30px;
+  font-size: 16px;
+  border: 1px solid #27264b;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #27264b;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 250ms ease-in-out;
+}
+.custom-team-member-block .get-started-button button:hover {
+  background-color: #e4e4f0;
+}
+.custom-team-member-block .get-started-button button.custom-color {
+  background-color: #ebd8b7;
+  /* Update with your custom color */
+}
+
 .wp-block-blocks-course-team-members {
   display: block;
+  /* stylelint-disable-next-line selector-class-pattern */
+}
+.wp-block-blocks-course-team-members.has-1-columns {
+  /* stylelint-disable-next-line selector-class-pattern */
 }
 .wp-block-blocks-course-team-members.has-1-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/team-member"] {
   width: calc(100% / 1 - 20px);
@@ -17,6 +86,9 @@
   justify-content: center;
   min-height: 70px;
 }
+.wp-block-blocks-course-team-members.has-2-columns {
+  /* stylelint-disable-next-line selector-class-pattern */
+}
 .wp-block-blocks-course-team-members.has-2-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/team-member"] {
   width: calc(100% / 2 - 20px);
 }
@@ -29,6 +101,9 @@
   align-items: center;
   justify-content: center;
   min-height: 70px;
+}
+.wp-block-blocks-course-team-members.has-3-columns {
+  /* stylelint-disable-next-line selector-class-pattern */
 }
 .wp-block-blocks-course-team-members.has-3-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/team-member"] {
   width: calc(100% / 3 - 20px);
@@ -43,6 +118,9 @@
   justify-content: center;
   min-height: 70px;
 }
+.wp-block-blocks-course-team-members.has-4-columns {
+  /* stylelint-disable-next-line selector-class-pattern */
+}
 .wp-block-blocks-course-team-members.has-4-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/team-member"] {
   width: calc(100% / 4 - 20px);
 }
@@ -56,6 +134,9 @@
   justify-content: center;
   min-height: 70px;
 }
+.wp-block-blocks-course-team-members.has-5-columns {
+  /* stylelint-disable-next-line selector-class-pattern */
+}
 .wp-block-blocks-course-team-members.has-5-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/team-member"] {
   width: calc(100% / 5 - 20px);
 }
@@ -68,6 +149,9 @@
   align-items: center;
   justify-content: center;
   min-height: 70px;
+}
+.wp-block-blocks-course-team-members.has-6-columns {
+  /* stylelint-disable-next-line selector-class-pattern */
 }
 .wp-block-blocks-course-team-members.has-6-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/team-member"] {
   width: calc(100% / 6 - 20px);
@@ -94,19 +178,6 @@
 }
 .wp-block-blocks-course-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/team-member"] {
   margin: 10px;
-}
-.wp-block-blocks-course-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/team-member"] h4 {
-  color: #222;
-  font-size: 22px;
-  font-size: bold;
-  margin: 0;
-}
-.wp-block-blocks-course-team-members > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/team-member"] p {
-  color: #565656;
-  font-size: 16px;
-  font-weight: 300;
-  margin-bottom: 5px;
-  margin-top: 5px;
 }
 
 /*# sourceMappingURL=index.css.map*/

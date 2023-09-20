@@ -14,6 +14,19 @@
  */
 
 /**
+ * Enqueues the editor styles for the block.
+ */
+function blocks_course_enqueue_editor_styles() {
+    wp_enqueue_style(
+        'blocks-course-editor-styles',  // Handle
+        plugins_url( 'editor.scss', __FILE__ ),  // URL to your editor.scss
+        array( 'wp-edit-blocks' ),  // Dependencies
+        
+    );
+}
+add_action( 'enqueue_block_editor_assets', 'blocks_course_enqueue_editor_styles' );
+
+/**
  * Registers the block using the metadata loaded from the `block.json` file.
  * Behind the scenes, it registers also all assets so they can be enqueued
  * through the block editor in the corresponding context.
